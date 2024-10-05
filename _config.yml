@@ -1,16 +1,16 @@
 # Site settings
-title: Pudhina
+title: Yui
 description: >
-  A simple, minimal Jekyll theme for a personal web page and blog, focusing on white space and readability
+  旅の始まり。
 
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "https://yui21g.github.io" # the base hostname & protocol for your site
 
 author:
-  fullname: Pudhina
-  github: github
-  linkedin: linkedin
-  email: example@email.com
+  fullname: Yui
+  github: yui21g
+  #linkedin: linkedin
+  #email: example@email.com
 
 
 # Syntax highlighting
