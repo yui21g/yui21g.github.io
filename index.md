@@ -10,5 +10,4 @@ sitemap:
 
 <div id="describe-text">
 	<p>旅の始まり。</p>
-	<p>Fork and use the theme from the <strong> <a href="https://github.com/knhash/Pudhina"> repository</a> </strong></p>
 </div>
