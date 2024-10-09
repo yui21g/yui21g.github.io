@@ -47,7 +47,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 {% endhighlight %}
 
 ### 3. Check Version
-{% hightlight sh %}
+{% highlight sh %}
 docker-compose --version
 {% endhighlight %}
 
