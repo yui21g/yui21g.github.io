@@ -54,7 +54,7 @@ docker-compose --version
 
 
 ## Using Docker without sudo
-{% hightlight sh %}
+{% highlight sh %}
 sudo usermod -aG docker $USER
 sudo reboot
 {% endhighlight %}
