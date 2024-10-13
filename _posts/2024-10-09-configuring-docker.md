@@ -7,40 +7,36 @@ categories: ["ubuntu"]
 ---
 
 ## Installing Docker
-
-### 1. APT update && upgrade && install
 {% highlight sh %}
-sudo apt update -y && sudo apt upgrade -y && sudo apt install curl ca-certificates apt-transport-https software-properties-common -y
-{% endhighlight %}
+# 1. APT update && upgrade && install
+sudo apt update -y && \
+sudo apt upgrade -y && \
+sudo apt install curl ca-certificates apt-transport-https software-properties-common -y && \
 
-### 2. Add GPG Key and Docker Storage
-{% highlight sh %}
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/docker-archive-keyring.gpg > /dev/null && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-{% endhighlight %}
+# 2. Add GPG Key and Docker Storage
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/docker-archive-keyring.gpg > /dev/null && \
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null && \
 
-### 3. Install Docker
-{% highlight sh %}
-sudo apt update -y && sudo apt install docker-ce -y
-{% endhighlight %}
+# 3. Install Docker
+sudo apt update -y && \
+sudo apt install docker-ce -y && \
 
-### 4. Start Docker Service and Check Version
-{% highlight sh %}
-sudo systemctl start docker && sudo systemctl enable docker && sudo docker --version
+# 4. Start Docker Service and Check Version
+sudo systemctl start docker && \
+sudo systemctl enable docker && \
+sudo docker --version
 {% endhighlight %}
 
 
 ## Installing docker-compose
-
-### 1. Download docker-compose
 {% highlight sh %}
-sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-{% endhighlight %}
+# 1. Download docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
 
-### 2. Grant execute permission and Check Version
-{% highlight sh %}
-sudo chmod +x /usr/local/bin/docker-compose && docker-compose --version
+# 2. Grand execute permission and Check Version
+sudo chmod +x /usr/local/bin/docker-compose && \
+docker-compose --version
 {% endhighlight %}
-
 
 
 ## Using Docker without sudo (Optional)
