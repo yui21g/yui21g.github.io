@@ -10,7 +10,7 @@ categories: ["ubuntu"]
 
 ### 1. APT update && upgrade && install
 {% highlight sh %}
-sudo apt update -y && sudo apt upgrade -y && sudo apt install curl ca-certificates apt-transport-https software-properties-common
+sudo apt update -y && sudo apt upgrade -y && sudo apt install curl ca-certificates apt-transport-https software-properties-common -y
 {% endhighlight %}
 
 ### 2. Add GPG Key and Docker Storage
@@ -20,13 +20,12 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | sudo t
 
 ### 3. Install Docker
 {% highlight sh %}
-sudo apt update && sudo apt install docker-ce
+sudo apt update -y && sudo apt install docker-ce -y
 {% endhighlight %}
 
 ### 4. Start Docker Service and Check Version
 {% highlight sh %}
-sudo systemctl start docker && sudo systemctl enable docker
-sudo docker --version
+sudo systemctl start docker && sudo systemctl enable docker && sudo docker --version
 {% endhighlight %}
 
 
@@ -39,13 +38,12 @@ sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-
 
 ### 2. Grant execute permission and Check Version
 {% highlight sh %}
-sudo chmod +x /usr/local/bin/docker-compose
-docker-compose --version
+sudo chmod +x /usr/local/bin/docker-compose && docker-compose --version
 {% endhighlight %}
 
 
 
-## Using Docker without sudo
+## Using Docker without sudo (Optional)
 {% highlight sh %}
 sudo usermod -aG docker $USER
 sudo reboot
